@@ -138,6 +138,11 @@ __      __   _  __   ____  __
 				"|                                                                             |",
 				"| " + underline + "https://leaningtech.com/mini-webvm-your-linux-box-from-dockerfile-via-wasm" + normal +"  |",
 				"|                                                                             |",
+				"|                                                                             |",
+				"| Join our Discord server for updates:                                        |",
+				"|                                                                             |",
+				"| " + underline + "https://discord.leaningtech.com" + normal + "                                             |",
+				"|                                                                             |",
 				"+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~+",
 				"",
 				"   Welcome to WebVM. If unsure, try these examples:",
@@ -332,7 +337,7 @@ __      __   _  __   ____  __
 			printOnTerm.printError(printOnTerm.getErrorMessage(err));
 		}
 		// The device url and type are replaced by Github Actions.
-		CheerpXApp.create({devices:[{type:DEVICE_TYPE,url:IMAGE_URL,name:"block1"}],mounts:[{type:"ext2",dev:"block1",path:"/"},{type:"cheerpOS",dev:"/app",path:"/app"},{type:"cheerpOS",dev:"/str",path:"/data"},{type:"devs",dev:"",path:"/dev"}], networkInterface: networkInterface}).then(runTest, failCallback);
+		CheerpXApp.create({devices:[{type:DEVICE_TYPE,url:IMAGE_URL,name:"block1"}],mounts:[{type:"ext2",dev:"block1",path:"/"},{type:"cheerpOS",dev:"/app",path:"/app"},{type:"cheerpOS",dev:"/str",path:"/data"},{type:"devs",dev:"",path:"/dev"},{type:"proc",dev:"",path:"/proc"}], networkInterface: networkInterface}).then(runTest, failCallback);
 	}
 	function initialMessage()
 	{
@@ -354,15 +359,6 @@ __      __   _  __   ____  __
 	}
 	loadCX();
     </script>
-<!-- Google tag (gtag.js) -->
-<script defer src="https://www.googletagmanager.com/gtag/js?id=G-818T3Y0PEY"></script>
-<script defer>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-818T3Y0PEY');
-</script>
   </body>
 </html>
 
